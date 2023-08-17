@@ -25,20 +25,3 @@ export const Input = styled.input`
   font: inherit;
   cursor: pointer;
 `;
-
-// export const Button = styled.button`
-//   padding: 8px 12px;
-//   font: inherit;
-//   cursor: pointer;
-//   border-radius: 4px;
-//   border: 2px solid #f08080;
-//   color: #f08080;
-//   font-size: 20px;
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-
-//   &:hover {
-//     background-color: #b9bcd3;
-//   }
-// `;
