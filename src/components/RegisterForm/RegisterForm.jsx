@@ -1,6 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operations';
-import { Form, Label, Input, Button } from './RegisterForm.styled';
+import { Form, Label, Input } from './RegisterForm.styled';
+import Button from '@mui/material/Button';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
@@ -54,7 +55,7 @@ export const RegisterForm = () => {
           required
         />
       </Label>
-      <Button type="submit">Register</Button>
+      <Button type="submit" variant="contained">Register</Button>
     </Form>
   );
 };

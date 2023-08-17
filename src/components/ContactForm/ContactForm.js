@@ -4,7 +4,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Filter } from 'components/Filter/Filter';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContacts } from 'redux/contacts/operations';
-import { Form, Label, Input, Button } from './ContactForm.styled';
+import { Form, Label, Input } from './ContactForm.styled';
+import Button from '@mui/material/Button'
 
 
 const nameInputId = nanoid();
@@ -73,14 +74,14 @@ export const ContactForm = () => {
             value={number}
             onChange={handleChange}
             pattern="\+\d{12}"
-            minlength="13"
-            maxlength="13"
+            minLength="13"
+            maxLength="13"
             title="Номер телефону має починатися з +, а потім 12 цифр"
             required
           />
         </Label>
 
-        <Button type="submit">
+        <Button type="submit" variant="contained">
           Add contact{' '}
         </Button>
       </Form>

@@ -3,7 +3,8 @@ import { useSelector } from 'react-redux';
 import { selectVisibleContacts } from 'redux/contacts/selectors';
 import { useDispatch } from 'react-redux';
 import { deleteContacts } from 'redux/contacts/operations';
-import { List, Item, Button } from './ContactsList.styled';
+import { List, Item } from './ContactsList.styled';
+import Button from '@mui/material/Button';
 
 
 
@@ -18,7 +19,10 @@ export const ContactList = () => {
           {contact.name + ' : ' + contact.number}
           {
             <Button
+              variant="contained"
+              color="error"
               type="button"
+              size="small"
               name="delete"
               onClick={() => dispatch(deleteContacts(contact.id))}
             >

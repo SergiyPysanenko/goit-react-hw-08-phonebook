@@ -5,8 +5,8 @@ export const Form = styled.form`
   flex-direction: column;
   width: 400px;
   padding: 12px;
-  background-color: rgba(0, 0, 0, 0.6);
-  border: 3px solid #f08080;
+  background-color: #dedede;
+  /* border: 2px solid #f50057; */
   border-radius: 4px;
   margin: 0 auto;
 `;
@@ -15,7 +15,7 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
   margin-bottom: 16px;
-  color: #f08080;
+  color: #00b0ff;
   font-size: 20px;
 `;
 

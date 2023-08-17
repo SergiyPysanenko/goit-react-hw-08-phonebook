@@ -8,7 +8,7 @@ export const Link = styled(NavLink)`
   font-weight: 700;
   color: #00b0ff;
   font-size: 20px;
-  background-color: #979797;
+  background-color: #dedede;
 
   &:hover {
     color: #ffffff;
