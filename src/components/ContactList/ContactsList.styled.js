@@ -1,40 +1,40 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  padding-left: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 400px;
+  padding: 12px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 3px solid #f08080;
+  margin: 0 auto;
 `;
 
 export const Item = styled.li`
-  width: 500px;
+  background-color: #ffffff;
+  border: 3px solid #f08080;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-size: 17px;
-
-  &:not(:last-child) {
-    margin-bottom: 15px;
-  }
-`;
-
-export const Text = styled.p`
-  display: inline-block;
-  min-width: 300px;
+  justify-content: space-between;
+  font-size: 20px;
 `;
 
 export const Button = styled.button`
-  width: 70px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  margin-left: 10px;
-  border: 1px solid #c4c4c4;
-  border-radius: 4px;
+  padding: 4px 8px;
+  font: inherit;
   cursor: pointer;
-  background-color: transparent;
-  transition: background-color 0.5s ease;
+  border-radius: 4px 8px;
+  border: 3px solid #f08080;
+  display: flex;
+  align-items: center;
 
-  &:hover,
-  &:focus {
-    background-color: #c4c4c4;
+  &:hover {
+    background-color: #b9bcd3;
   }
 `;
 

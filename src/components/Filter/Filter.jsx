@@ -1,11 +1,12 @@
-import { Div, Label, Input } from './Filter.styted';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilter } from 'redux/selectors';
-import { changeFilter } from 'redux/filterSlice';
+import { selectFilter } from 'redux/filter/selectors';
+import { changeFilter } from 'redux/filter/filterSlice';
+import { Wrapper, Input, Label } from './Filter.styted';
 
-const Filter = () => {
-  const value = useSelector(selectFilter);
-  const dispatch = useDispatch();
+
+export const Filter = () => {
+  const value = useSelector(selectFilter); 
+  const dispatch = useDispatch(); 
 
   const onChange = event => {
     const normalizedValue = event.target.value.toLowerCase();
@@ -14,13 +15,9 @@ const Filter = () => {
   };
 
   return (
-    <Div>
-      <Label>
-        Find contacts by name
-        <Input type="text" value={value} onChange={onChange} />
-      </Label>
-    </Div>
+    <Wrapper>
+      <Label>Find contacts by name</Label>
+      <Input type="text" value={value} onChange={onChange} />
+    </Wrapper>
   );
 };
-
-export default Filter;

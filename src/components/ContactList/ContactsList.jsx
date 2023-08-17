@@ -1,14 +1,16 @@
 import React from 'react';
-import { List, Item } from './ContactsList.styled';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectVisibleContacts } from 'redux/selectors';
-import { deleteContacts } from '../../redux/operations';
-import { Button } from '@mui/material';
+import { useSelector } from 'react-redux';
+import { selectVisibleContacts } from 'redux/contacts/selectors';
+import { useDispatch } from 'react-redux';
+import { deleteContacts } from 'redux/contacts/operations';
+import { List, Item, Button } from './ContactsList.styled';
 
 
-const ContactList = () => {
+
+export const ContactList = () => {
   const contacts = useSelector(selectVisibleContacts);
   const dispatch = useDispatch();
+
   return (
     <List>
       {contacts.map(contact => (
@@ -16,9 +18,6 @@ const ContactList = () => {
           {contact.name + ' : ' + contact.number}
           {
             <Button
-              variant="outlined" 
-              color="error"
-              size="small"
               type="button"
               name="delete"
               onClick={() => dispatch(deleteContacts(contact.id))}
@@ -31,5 +30,3 @@ const ContactList = () => {
     </List>
   );
 };
-
-export default ContactList;
